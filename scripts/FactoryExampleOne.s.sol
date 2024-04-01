@@ -2,12 +2,12 @@
 pragma solidity ^0.8.0;
 
 import {Script} from 'forge-std/Script.sol';
-import {Ghost} from '../src/contracts/Ghost.sol';
+import {FactoryExampleOne} from '../src/contracts/FactoryExampleOne.sol';
 
-contract Deploy is Script {
+contract DeployFactoryExampleOne is Script {
   function run() external {
     vm.startBroadcast();
-    new Ghost();
+    new FactoryExampleOne();
     vm.stopBroadcast();
   }
 }

@@ -15,3 +15,6 @@ git-diff :
 	@mkdir -p diffs
 	@npx prettier ${before} ${after} --write
 	@printf '%s\n%s\n%s\n' "\`\`\`diff" "$$(git diff --no-index --diff-algorithm=patience --ignore-space-at-eol ${before} ${after})" "\`\`\`" > diffs/${out}.md
+
+deploy-ex-one:
+	zkforge script scripts/FactoryExampleOne.s.sol:DeployFactoryExampleOne --rpc-url zksync-sepolia --private-key ${PRIVATE_KEY} --chain 300 --broadcast
