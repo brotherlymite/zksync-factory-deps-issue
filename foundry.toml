@@ -3,6 +3,7 @@ src = 'src'
 test = 'tests'
 script = 'scripts'
 out = 'out'
+is_system = true
 libs = ['lib']
 remappings = [
 ]
