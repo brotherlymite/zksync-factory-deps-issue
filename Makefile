@@ -18,3 +18,6 @@ git-diff :
 
 deploy-ex-one:
 	zkforge script scripts/FactoryExampleOne.s.sol:DeployFactoryExampleOne --rpc-url zksync-sepolia --private-key ${PRIVATE_KEY} --chain 300 --broadcast
+
+deploy-ex-two:
+	zkforge script scripts/FactoryExampleTwo.s.sol:DeployFactoryExampleTwo --rpc-url zksync-sepolia --private-key ${PRIVATE_KEY} --chain 300 --broadcast
