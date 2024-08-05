@@ -15,5 +15,5 @@ jobs:
         uses: brotherlymite/foundry-toolchain@v1.1
 
       - name: Forge version
-        run: |
-          forge --version | sed -r 's/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g' | tee /tmp/foundry_version ; test ${PIPESTATUS[0]} -eq 0
+        run:
+          forge --version | sed -r 's/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g' | tee /tmp/foundry_version
