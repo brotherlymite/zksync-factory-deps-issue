@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Install foundry zksync"
-        uses: bgd-labs/foundry-zksync-toolchain@1.0.1
+        uses: bgd-labs/foundry-zksync-toolchain@1.0.8
 
       - name: Forge version
         run:
