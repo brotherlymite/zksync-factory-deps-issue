@@ -8,5 +8,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
-    uses: bgd-labs/github-workflows/.github/workflows/foundry-test.yml@main
+  install-foundry-zksync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Install foundry zksync"
+        uses: bgd-labs/foundry-zksync-toolchain@1.0.1-e72fef048cba85b7e2b4a50bafdd83aeeff1a007.0
+
+      - name: Forge version
+        run:
+          forge --version | sed -r 's/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g' | tee /tmp/foundry_version
