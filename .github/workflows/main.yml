@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Install foundry zksync"
-        uses: brotherlymite/foundry-toolchain@v1.0
+        uses: brotherlymite/foundry-toolchain@v1.1
