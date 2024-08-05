@@ -8,5 +8,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
-    uses: bgd-labs/github-workflows/.github/workflows/foundry-test.yml@main
+  install-foundry-zksync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Install foundry zksync"
+        uses: brotherlymite/foundry-zksync-test-toolchain@v1.0
